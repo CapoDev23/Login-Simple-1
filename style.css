@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+:root{
+    --thunderbird-50: #fff1f1;
+    --thunderbird-100: #ffdfdf;
+    --thunderbird-200: #ffc5c5;
+    --thunderbird-300: #ff9c9c;
+    --thunderbird-400: #ff6363;
+    --thunderbird-500: #ff3232;
+    --thunderbird-600: #ef1313;
+    --thunderbird-700: #de0d0d;
+    --thunderbird-800: #a60e0e;
+    --thunderbird-900: #891313;
+    --thunderbird-950: #4b0404;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--thunderbird-950);
+    overflow: hidden;
+}
+.box{
+    background-color: var(--thunderbird-50);
+    width: 35%;
+    height: 50%;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 15px 0px 10px 8px var(--thunderbird-700);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+.box form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
+.box form .box-in{
+    background-color: var(--thunderbird-500);
+    outline: none;
+    border: none;
+    width: 60%;
+    height: 12.3%;
+    border-radius: 10px;
+}
+input::placeholder{
+    color: #ffdfdf;
+    padding:  4px;
+}
+input[type="text"]{
+    padding-left: 5px;
+    color: var(--thunderbird-950);
+    font-weight: bold;
+    font-size: 1rem;
+}
+input[type="password"]{
+    padding-left: 5px;
+    color: var(--thunderbird-950);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+.meta-auths{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+.meta-auths i{
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    width: 45px;
+    height: 45px;
+    border: 1px solid var(--thunderbird-950);  
+}
+.meta-auths i:hover{
+    background-color: #ff6363;
+    transform: scale(1.2);
+    transition: all 0.3s ease-in;
+}
+.btn-l{
+    width: 85px;
+    height: 35px;
+    background: linear-gradient(45deg, var(--thunderbird-400), var(--thunderbird-600));
+    border: none;
+    border-radius: 8px;
+    color: #4b0404;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.btn-l:hover{
+    background: linear-gradient(45deg, var(--thunderbird-500), var(--thunderbird-700));
+    transform: scale(1.1);
+    transition: all 0.3s ease-in;
+}
+.meta-b a{
+    margin: 5px;
+}
+
+.rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+  
+.square {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ff0000; 
+    opacity: 0.8; 
+    animation: fall linear infinite;
+    border-radius: 4px;
+}
+  
+@keyframes fall {
+    to {
+      transform: translateY(100vh);
+    }
+}
